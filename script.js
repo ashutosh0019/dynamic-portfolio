@@ -1,12 +1,14 @@
+// Load data.json dynamically
 fetch('data.json')
   .then(res => res.json())
   .then(data => {
-    // Update name and about
-    document.getElementById('displayName').textContent = data.name;
+    // Typing effect
+    typeEffect(data.name, document.getElementById('displayName'));
+
     document.getElementById('aboutText').textContent = data.about;
     document.getElementById('footerName').textContent = data.name;
 
-    // Update skills
+    // Skills
     const skillsList = document.getElementById('skillsList');
     data.skills.forEach(skill => {
       const li = document.createElement('li');
@@ -14,7 +16,7 @@ fetch('data.json')
       skillsList.appendChild(li);
     });
 
-    // Update projects
+    // Projects
     const projectsContainer = document.getElementById('projectsContainer');
     data.projects.forEach(project => {
       const card = document.createElement('div');
@@ -27,9 +29,44 @@ fetch('data.json')
       projectsContainer.appendChild(card);
     });
 
-    // Update contact
+    // Contact
     document.getElementById('contactEmail').textContent = data.contact.email;
     document.getElementById('contactLinkedIn').href = data.contact.linkedin;
     document.getElementById('contactGitHub').href = data.contact.github;
   })
   .catch(err => console.error('Error loading data:', err));
+
+// Typing effect
+function typeEffect(text, element, delay=100) {
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(typing, delay);
+    }
+  }
+  typing();
+}
+
+// Animate sections on scroll
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+  });
+}, { threshold: 0.1 });
+sections.forEach(section => observer.observe(section));
+
+// Back to top
+let topBtn = document.getElementById("topBtn");
+window.onscroll = function() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+};
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
