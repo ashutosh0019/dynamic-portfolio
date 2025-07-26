@@ -7,10 +7,16 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1 id="displayName">Loading...</h1>
-    <p id="aboutText"></p>
-    <nav>
+  <!-- Hero / Header -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
+      <h1 id="displayName"></h1>
+      <p id="aboutText">Loading about...</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+    <nav class="main-nav">
+      <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
@@ -18,21 +24,37 @@
   </header>
 
   <main>
-    <section id="projects">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p id="aboutText"></p>
+    </section>
+
+    <section id="projects" class="section">
       <h2>Projects</h2>
       <div id="projectsContainer" class="projects-grid"></div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="section">
       <h2>Skills</h2>
       <ul id="skillsList" class="skills-list"></ul>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Email: <span id="contactEmail"></span></p>
-      <p>LinkedIn: <a id="contactLinkedIn" href="#" target="_blank">Profile</a></p>
-      <p>GitHub: <a id="contactGitHub" href="#" target="_blank">Profile</a></p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <p>Email:</p>
+          <span id="contactEmail"></span>
+        </div>
+        <div class="contact-card">
+          <p>LinkedIn:</p>
+          <a id="contactLinkedIn" href="#" target="_blank">Profile</a>
+        </div>
+        <div class="contact-card">
+          <p>GitHub:</p>
+          <a id="contactGitHub" href="#" target="_blank">Profile</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -40,6 +62,7 @@
     <p>&copy; 2025 <span id="footerName">John Doe</span></p>
   </footer>
 
+  <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
   <script src="script.js"></script>
 </body>
 </html>
