@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="displayName">Loading...</h1>
+    <p id="aboutText"></p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div id="projectsContainer" class="projects-grid"></div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul id="skillsList" class="skills-list"></ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <span id="contactEmail"></span></p>
+      <p>LinkedIn: <a id="contactLinkedIn" href="#" target="_blank">Profile</a></p>
+      <p>GitHub: <a id="contactGitHub" href="#" target="_blank">Profile</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 <span id="footerName">John Doe</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

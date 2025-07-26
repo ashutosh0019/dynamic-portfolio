@@ -1,0 +1,22 @@
+{
+  "name": "John Doe",
+  "about": "Hello! I'm John, a high school student passionate about AI and Web Development.",
+  "skills": ["Python", "JavaScript", "HTML", "CSS", "React", "Git", "Communication", "Teamwork"],
+  "projects": [
+    {
+      "title": "Weather App",
+      "description": "A web app to check current weather using OpenWeather API.",
+      "link": "#"
+    },
+    {
+      "title": "Student Result Analysis",
+      "description": "Analyze student marks and performance using Python and charts.",
+      "link": "#"
+    }
+  ],
+  "contact": {
+    "email": "john@example.com",
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "github": "https://github.com/johndoe"
+  }
+}
