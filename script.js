@@ -5,8 +5,7 @@ fetch('data.json')
     // Typing effect
     typeEffect(data.name, document.getElementById('displayName'));
 
-    document.getElementById('heroAboutText').textContent = data.about;
-    document.getElementById('aboutSectionText').textContent = data.about;
+    document.getElementById('aboutText').textContent = data.about;
     document.getElementById('footerName').textContent = data.name;
 
     // Skills
