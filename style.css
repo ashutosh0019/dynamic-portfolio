@@ -11,12 +11,11 @@ body {
 
 .education-card {
   background: linear-gradient(135deg, #ffffff, #e6ecf3);
-  padding: 15px 20px;
+  border-left: 5px solid #00c6ff;
+  padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  /* text-align: center; */
-  width: 300px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
 .education-card:hover {
