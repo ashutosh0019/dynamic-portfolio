@@ -12,9 +12,34 @@
       "title": "Weather App",
       "description": "Check current weather...",
       "link": "https://github.com/yourusername/weather-app"
+    },
+    {
+      "title": "Weather App",
+      "description": "Check current weather...",
+      "link": "https://github.com/yourusername/weather-app"
+    },
+    {
+      "title": "Weather App",
+      "description": "Check current weather...",
+      "link": "https://github.com/yourusername/weather-app"
     }
   ],
   "education": [
+    {
+      "degree": "12th Grade, Computer Science",
+      "school": "XYZ Public School",
+      "year": "2025"
+    },
+    {
+      "degree": "10th Grade",
+      "school": "XYZ Public School",
+      "year": "2023"
+    },
+    {
+      "degree": "10th Grade",
+      "school": "XYZ Public School",
+      "year": "2023"
+    },
     {
       "degree": "12th Grade, Computer Science",
       "school": "XYZ Public School",
