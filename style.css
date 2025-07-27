@@ -20,6 +20,7 @@ body {
 
 .education-card:hover {
   transform: translateY(-5px);
+  border-left-color: #ff6ec4;
 }
 
 .education-card h3 {
