@@ -8,6 +8,19 @@ fetch('data.json')
     document.getElementById('aboutText').textContent = data.about;
     document.getElementById('footerName').textContent = data.name;
 
+    // Load education dynamically
+    const educationContainer = document.getElementById('educationContainer');
+    data.education.forEach(item => {
+      const div = document.createElement('div');
+      div.className = 'education-card';
+      div.innerHTML = `
+        <h3>${item.degree}</h3>
+        <p>${item.school} (${item.year})</p>
+      `;
+      educationContainer.appendChild(div);
+    });
+
+
     // Skills
     const skillsList = document.getElementById('skillsList');
     data.skills.forEach(skill => {
